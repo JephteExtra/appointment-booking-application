@@ -11,6 +11,17 @@ class BookingsController < ApplicationController
     @booking = Booking.new
   end
 
+  def create
+    @booking = Booking.new(booking_params)
+    respond_to do |format|
+      if @booking.save
+        format.html { redirect_to booking_url(@booking), notice: "Booking was successfully created" }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
 
   def set_booking

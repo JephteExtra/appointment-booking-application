@@ -9,4 +9,8 @@
     <%= f.label :room, style: "display:block" %>
     <%= f.collection_select :room_id, Room.all, :id, :name %>
   </div>
+
+  <div>
+    <%= f.submit %>
+  </div>
 <% end %>
