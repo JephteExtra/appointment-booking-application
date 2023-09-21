@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: %i[show]
+  before_action :set_booking, only: %i[show edit]
   def index
     @bookings = Booking.all
   end
@@ -20,6 +20,9 @@ class BookingsController < ApplicationController
         format.html { render :new, status: :unprocessable_entity }
       end
     end
+  end
+
+  def edit
   end
 
   private
