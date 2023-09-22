@@ -1,5 +1,5 @@
-<%= @booking.start %>
-<%= @booking.end %>
-<%= @booking.purpose %>
-<%= @booking.room.name %>
+<p>Start: <%= @booking.start %></p>
+<p>End: <%= @booking.end %></p>
+<p>Purpose: <%= @booking.purpose %></p>
+<p>Room: <%= @booking.room.name %></p>
 <%= button_to "Destroy this Booking", @booking, method: :delete %>
