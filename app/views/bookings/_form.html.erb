@@ -2,12 +2,25 @@
   <div>
     <%= f.label :start, style: "display:block" %>
     <%= f.datetime_field :start %>
+  </div>
+
+  <div>
     <%= f.label :end, style: "display:block" %>
     <%= f.datetime_field :end %>
+  </div>
+
+  <div>
     <%= f.label :purpose, style: "display:block" %>
     <%= f.text_field :purpose %>
+  </div>
+
+  <div>
     <%= f.label :room, style: "display:block" %>
     <%= f.collection_select :room_id, Room.all, :id, :name %>
+  </div>
+
+  <div>
+    <%= f.hidden_field :user_id, value: current_user.id %>
   </div>
 
   <div>
